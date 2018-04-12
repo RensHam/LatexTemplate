@@ -1,0 +1,91 @@
+\usepackage[utf8]{inputenc}
+
+\usepackage{datetime}
+\usepackage{enumerate}
+% \usepackage{multicol}
+% \usepackage{multirow}
+\usepackage[official]{eurosym}
+% \usepackage{marvosym}
+\usepackage{float}                % Force a floating figure at that location
+% \usepackage{breakurl}             % Fixes problems with long URLs
+\usepackage{xtab}                 % Spreads tables over more pages
+\usepackage{verbatim}
+\usepackage{framed}
+\usepackage{listings}             % Nicer code environments
+\usepackage{footnote}             % To enable footnotes in tables
+\usepackage{array}                % Use column width in tabular environment
+\usepackage{xspace}               % Magic spaces after a command
+\usepackage{siunitx}              % Supersedes $[value]\,\mathrm{[unit]}$ and sistyle
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{tabto}
+\usepackage[ampersand]{easylist}
+\usepackage{todonotes}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{chronology} % timeline
+\usepackage{enumitem}
+\usepackage{dirtytalk} % ( ͡° ͜ʖ ͡°)
+% \usepackage{tabularx}
+% \usepackage{tabu}
+% \usepackage{algorithm}
+% \usepackage{algpseudocode}
+\usepackage{pdfpages}
+\usepackage{textcomp,gensymb} % degree
+% \usepackage{lscape}
+% \usepackage{booktabs}% http://ctan.org/pkg/booktabs
+% \newcommand{\tabitem}{~~\llap{\textbullet}~~}
+%\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{regexpatch} %Regex voor de win
+\usepackage{etoolbox}
+\usepackage{float}
+\usepackage[caption = false]{subfig}
+
+\usepackage[numbers]{natbib}
+
+\sisetup{detect-weight=true, detect-family=true}
+
+\lstset{basicstyle=\ttfamily, breaklines=true, breakatwhitespace = true, keepspaces=true}
+
+\makeatletter
+\patchcmd{\@IEEEyesnumber}
+  {\stepcounter}
+  {\refstepcounter}
+  {}{}
+\patchcmd{\@@IEEEeqnarray}
+  {\stepcounter}
+  {\refstepcounter}
+  {}{}
+\patchcmd{\@@IEEEeqnarraycr}
+  {\stepcounter{IEEEsubequation}}
+  {\refstepcounter{IEEEsubequation}}
+  {}{}
+\patchcmd{\@@IEEEeqnarraycr}
+  {\stepcounter{IEEEsubequation}}
+  {\refstepcounter{IEEEsubequation}}
+  {}{}
+\patchcmd{\@@IEEEeqnarraycr}
+  {\stepcounter{IEEEequation}}
+  {\refstepcounter{IEEEequation}}
+  {}{}
+\patchcmd{\@@IEEEeqnarraycr}
+  {\stepcounter{IEEEequation}}
+  {\refstepcounter{IEEEequation}}
+  {}{}
+\makeatother
+
+\newcommand{\noi}{\noindent}
+
+\makeatletter
+\xpatchcmd{\@todo}{\setkeys{todonotes}{#1}}{\setkeys{todonotes}{inline,#1}}{}{}
+\makeatother
+
+\makeatletter
+\renewcommand{\fps@figure}{htbp}
+\renewcommand{\fps@table}{htb}
+\makeatother
